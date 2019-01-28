@@ -190,7 +190,9 @@ laptops.loc[laptops["operating_system"] == "macOS", "operating_system_version"] 
 
 #print(laptops.loc[laptops["operating_system"] == "macOS", "operating_system_version"])
 
+laptops.loc[laptops["operating_system"] == "No OS", "operating_system_version"] = "Version Unknown"
 
+value_counts_after = laptops.loc[laptops["operating_system_version"].isnull(), "operating_system"].value_counts()
 
-
+print(value_counts_after)
 
